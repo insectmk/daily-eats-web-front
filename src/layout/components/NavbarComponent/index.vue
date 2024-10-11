@@ -1,0 +1,15 @@
+<script lang="ts">
+export default {
+  name: 'NavbarContent',
+}
+</script>
+
+<template>
+  <div>
+    头部
+  </div>
+</template>
+
+<style scoped lang="scss">
+
+</style>
