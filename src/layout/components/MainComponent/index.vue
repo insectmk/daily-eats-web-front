@@ -10,9 +10,45 @@ export default {
 </script>
 
 <template>
-  <div>
-    主要内容{{ count }}
-  </div>
+  <el-scrollbar><!--el美化滚动条-->
+    <div>
+      <p>主要内容{{ count }}</p>
+      <p>主要内容{{ count }}</p>
+      <p>主要内容{{ count }}</p>
+      <p>主要内容{{ count }}</p>
+      <p>主要内容{{ count }}</p>
+      <p>主要内容{{ count }}</p>
+      <p>主要内容{{ count }}</p>
+      <p>主要内容{{ count }}</p>
+      <p>主要内容{{ count }}</p>
+      <p>主要内容{{ count }}</p>
+      <p>主要内容{{ count }}</p>
+      <p>主要内容{{ count }}</p>
+      <p>主要内容{{ count }}</p>
+      <p>主要内容{{ count }}</p>
+      <p>主要内容{{ count }}</p>
+      <p>主要内容{{ count }}</p>
+      <p>主要内容{{ count }}</p>
+      <p>主要内容{{ count }}</p>
+      <p>主要内容{{ count }}</p>
+      <p>主要内容{{ count }}</p>
+      <p>主要内容{{ count }}</p>
+      <p>主要内容{{ count }}</p>
+      <p>主要内容{{ count }}</p>
+      <p>主要内容{{ count }}</p>
+      <p>主要内容{{ count }}</p>
+      <p>主要内容{{ count }}</p>
+      <p>主要内容{{ count }}</p>
+      <p>主要内容{{ count }}</p>
+      <p>主要内容{{ count }}</p>
+      <p>主要内容{{ count }}</p>
+      <p>主要内容{{ count }}</p>
+      <p>主要内容{{ count }}</p>
+      <p>主要内容{{ count }}</p>
+      <p>主要内容{{ count }}</p>
+      <p>主要内容{{ count }}</p>
+    </div>
+  </el-scrollbar>
 </template>
 
 <style scoped lang="scss">

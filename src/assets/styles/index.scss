@@ -1,0 +1,7 @@
+@import './layout/sidebar'; // 侧边栏样式
+
+// 主容器样式
+#de-app-container {
+  display: flex;
+  min-height: 100vh; /* 使容器占满整个视口高度 */
+}

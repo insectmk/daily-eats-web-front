@@ -1,18 +1,12 @@
 <template>
-  <el-container>
-    <el-aside width="200px"><!--侧边栏-->
-      <sidebar-component/>
-    </el-aside>
-    <el-container>
-      <el-header><!--头部-->
-        <navbar-component/>
-        <tags-view-component/>
-      </el-header>
-      <el-main><!--主要内容-->
-        <main-component/>
-      </el-main>
-    </el-container>
-  </el-container>
+  <div id="de-app-container">
+    <sidebar-component class="de-sidebar"/><!--侧边栏-->
+    <div class="de-main-content">
+      <navbar-component class="de-navbar"/><!--头部导航-->
+      <tags-view-component class="de-tags-view"/><!--页面标签-->
+      <main-component class="de-main"/><!--主要内容-->
+    </div>
+  </div>
 </template>
 
 <script>
@@ -31,7 +25,3 @@ export default {
   },
 }
 </script>
-
-<style lang="scss" scoped>
-
-</style>
