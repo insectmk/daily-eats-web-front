@@ -3,7 +3,7 @@ export default {
   name: 'MainContent',
   computed: {
     count () {
-      return this.$store.state.count
+      return 1 + 1
     }
   }
 }

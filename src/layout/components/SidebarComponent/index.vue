@@ -8,7 +8,7 @@
     text-color="#fff"
     @open="handleOpen"
     @close="handleClose"
-    :collapse="false">
+    :collapse="isCollapse">
     <el-sub-menu index="1">
       <template #title>
         <el-icon><location /></el-icon>
@@ -42,23 +42,24 @@
 </template>
 
 <script lang="ts" setup>
-import { ref } from 'vue'
 import {
   Document,
   Menu as IconMenu,
   Location,
   Setting,
 } from '@element-plus/icons-vue'
-
+import store from '@/store'
+import { computed } from 'vue'
+/*响应式数据*/
+const isCollapse = computed(() => store.state.framework.sidebarIsCollapse) // 展开状态
+/*函数*/
 const handleOpen = (key: string, keyPath: string[]) => {
   console.log(key, keyPath)
 }
-
 const handleClose = (key: string, keyPath: string[]) => {
   console.log(key, keyPath)
 }
-const isCollapse = ref(true)
-
+/*抛出的数据*/
 defineOptions({
   name: 'SidebarComponent'
 })

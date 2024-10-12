@@ -1,6 +1,6 @@
 <template>
   <div>
-    <el-icon :size="20">
+    <el-icon :size="20" @click="changeSidebarIsCollapse">
       <Operation />
     </el-icon>
     <el-breadcrumb separator="/" style="display: inline-block">
@@ -20,6 +20,12 @@
 
 <script lang="ts" setup>
 import { Operation } from '@element-plus/icons-vue'
+import store from '@/store'
+
+// 更改侧边栏展开状态
+const changeSidebarIsCollapse = () => {
+  store.commit('framework/sidebarIsCollapse', !store.state.framework.sidebarIsCollapse)
+}
 
 defineOptions({
   name: 'NavbarComponent'
