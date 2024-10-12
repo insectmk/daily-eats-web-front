@@ -1,6 +1,6 @@
 <template>
   <div>
-    <el-icon :size="30">
+    <el-icon :size="20">
       <Operation />
     </el-icon>
     <el-breadcrumb separator="/" style="display: inline-block">
