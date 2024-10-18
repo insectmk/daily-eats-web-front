@@ -20,4 +20,10 @@ const router = createRouter({
   ]
 })
 
+// 路由守卫，文档：https://router.vuejs.org/zh/guide/advanced/navigation-guards.html
+router.beforeEach((to, from) => {
+  // 返回 false 以取消导航
+  return true
+})
+
 export default router
