@@ -12,7 +12,7 @@
 
 将数据设置为计算属性，案例代码如下：
 ```ts
-// store/module/framework.ts
+// src/tore/module/framework.ts
 // 定义状态
 const state = {
   sidebarIsCollapse: false, // 侧边栏菜单收缩状态
@@ -48,5 +48,7 @@ export default {
 ```
 
 ```ts
-
+/*响应式数据*/
+// src/layout/components/SidebarComponent/index.vue
+const isCollapse = computed(() => store.state.framework.sidebarIsCollapse) // 展开状态
 ```
