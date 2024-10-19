@@ -3,35 +3,25 @@
     <el-row :gutter="20">
       <el-col :sm="24" :lg="24">
         <blockquote class="text-warning" style="font-size: 14px">
-          领取阿里云通用云产品1888优惠券
+          【腾讯云】云服务器、云数据库、COS、CDN、短信等云产品特惠热卖中
+          <el-link href="https://curl.qcloud.com/XdOict8l" type="primary" target="_blank">☛☛点我进入☚☚</el-link>
           <br />
           <el-link
-            href="https://www.aliyun.com/minisite/goods?userCode=brki8iof"
+            href="https://cloud.tencent.com/act/cps/redirect?redirect=2446&cps_key=d9acf994371247fbae0804667254d243&from=console"
             type="primary"
-            target="_blank"
-          >https://www.aliyun.com/minisite/goods?userCode=brki8iof</el-link
-          >
+            target="_blank">
+            https://cloud.tencent.com/act/cps/redirect?redirect=2446&cps_key=d9acf994371247fbae0804667254d243&from=console
+          </el-link>
           <br />
-          领取腾讯云通用云产品2860优惠券
+          【腾讯云】2核2G云服务器新老同享 99元/年，续费同价，云服务器3年机/5年机限时抢购，低至 2.5折
+          <el-link href="https://curl.qcloud.com/RFtsjlEZ" type="primary" target="_blank">☛☛点我进入☚☚</el-link>
           <br />
           <el-link
-            href="https://cloud.tencent.com/redirect.php?redirect=1025&cps_key=198c8df2ed259157187173bc7f4f32fd&from=console"
+            href="https://cloud.tencent.com/act/cps/redirect?redirect=6150&cps_key=d9acf994371247fbae0804667254d243&from=console"
             type="primary"
-            target="_blank"
-          >https://cloud.tencent.com/redirect.php?redirect=1025&cps_key=198c8df2ed259157187173bc7f4f32fd&from=console</el-link
-          >
-          <br />
-          阿里云服务器折扣区
-          <el-link href="http://aly.ruoyi.vip" type="primary" target="_blank"
-          >>☛☛点我进入☚☚</el-link
-          >
-          &nbsp;&nbsp;&nbsp; 腾讯云服务器秒杀区
-          <el-link href="http://txy.ruoyi.vip" type="primary" target="_blank"
-          >>☛☛点我进入☚☚</el-link
-          ><br />
-          <h4 class="text-danger">
-            云产品通用红包，可叠加官网常规优惠使用。(仅限新用户)
-          </h4>
+            target="_blank">
+            https://cloud.tencent.com/act/cps/redirect?redirect=6150&cps_key=d9acf994371247fbae0804667254d243&from=console
+          </el-link>
         </blockquote>
 
         <hr />
@@ -39,9 +29,11 @@
     </el-row>
     <el-row :gutter="20">
       <el-col :sm="24" :lg="12" style="padding-left: 20px">
-        <h2>若依后台管理框架</h2>
+        <h2>每日饭菜</h2>
         <p>
-          一直想做一款后台管理系统，看了很多优秀的开源项目但是发现没有合适自己的。于是利用空闲休息时间开始自己写一套后台系统。如此有了若依管理系统，她可以用于所有的Web应用程序，如网站管理后台，网站会员中心，CMS，CRM，OA等等，当然，您也可以对她进行深度定制，以做出更强系统。所有前端后台代码封装过后十分精简易上手，出错概率低。同时支持移动客户端访问。系统会陆续更新一些实用功能。
+          毕业了，好不容易找到了一份Java相关的工作，奈何公司技术太老，学不到东西，故想开发一款拥有常用技术的网站来保持自己的竞争力。
+          想做这个系统也完全是因为自己平时老做饭，业务可能比较熟悉，然后也想解决自己每天还要思考做啥菜的痛。
+          目前还是Java小白阶段，此项目为学习向产物，很多实现内容都是从若依框架学习而来。
         </p>
         <p>
           <b>当前版本:</b> <span>v{{ version }}</span>
@@ -51,20 +43,19 @@
         </p>
         <p>
           <el-button
-            type="primary"
-            size="mini"
-            icon="el-icon-cloudy"
-            plain
-            @click="goTarget('https://gitee.com/y_project/RuoYi-Vue')"
-          >访问码云</el-button
-          >
-          <el-button
-            size="mini"
             icon="el-icon-s-home"
             plain
-            @click="goTarget('http://ruoyi.vip')"
-          >访问主页</el-button
-          >
+            @click="goTarget('https://github.com/insectmk/daily-eats-web-front')">访问前端代码</el-button>
+          <el-button
+            type="primary"
+            icon="el-icon-cloudy"
+            plain
+            @click="goTarget('https://github.com/insectmk/daily-eats-web')">访问后端代码</el-button>
+          <el-button
+            type="primary"
+            icon="el-icon-cloudy"
+            plain
+            @click="goTarget('https://vue.ruoyi.vip/')">访问若依</el-button>
         </p>
       </el-col>
 
@@ -78,24 +69,21 @@
           <el-col :span="6">
             <h4>后端技术</h4>
             <ul>
-              <li>SpringBoot</li>
-              <li>Spring Security</li>
+              <li>Spring-Boot</li>
+              <li>Spring-Security</li>
               <li>JWT</li>
-              <li>MyBatis</li>
-              <li>Druid</li>
-              <li>Fastjson</li>
+              <li>MyBatis-Plus</li>
               <li>...</li>
             </ul>
           </el-col>
           <el-col :span="6">
             <h4>前端技术</h4>
             <ul>
-              <li>Vue</li>
+              <li>Vue3</li>
               <li>Vuex</li>
-              <li>Element-ui</li>
+              <li>Element-Plus</li>
               <li>Axios</li>
               <li>Sass</li>
-              <li>Quill</li>
               <li>...</li>
             </ul>
           </el-col>
@@ -112,7 +100,7 @@ export default {
   data() {
     return {
       // 版本号
-      version: "3.8.8"
+      version: "0.0.1"
     };
   },
   methods: {
@@ -156,7 +144,7 @@ export default {
   }
 
   h4 {
-    margin-top: 0px;
+    margin-top: 0;
   }
 
   h2 {
