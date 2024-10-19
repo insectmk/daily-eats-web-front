@@ -7,7 +7,7 @@ const router = createRouter({
   routes: [
     {
       path: '/',
-      name: 'home',
+      name: 'root',
       //component: () => import('../views/HomeView.vue')
       component: () => import('../layout/index.vue'),
       children: homeSubPages
