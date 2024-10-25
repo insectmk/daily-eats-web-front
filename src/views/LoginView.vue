@@ -1,5 +1,5 @@
 <script lang='ts'>
-import { login } from '@/api/system/login'
+import { login } from '@/api/core/login'
 import router from '@/router'
 
 export default {
