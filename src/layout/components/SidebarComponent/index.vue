@@ -8,11 +8,11 @@
     @close="handleClose"
     :router="true"
     :default-active="router.currentRoute.value.path"
-    :default-openeds="router.currentRoute.value.path"
+    :default-openeds="[router.currentRoute.value.path]"
     :collapse="isCollapse">
     <el-sub-menu v-for="menuLevel1 in menuTree"
                  :key="menuLevel1.id"
-                 :index="menuLevel1.path"
+                 :index="menuLevel1.id"
                  :unique-opened="true">
       <template #title>
         <el-icon>
