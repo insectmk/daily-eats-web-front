@@ -8,7 +8,7 @@ export default {
     return {
       codeUrl: "",
       loginForm: {
-        username: "InsectMk",
+        username: "makun",
         password: "123456",
         rememberMe: true,
       },
@@ -94,7 +94,7 @@ export default {
     </el-form>
     <!--  底部  -->
     <div class="el-login-footer">
-      <span>Copyright © 2018-2024 ruoyi.vip All Rights Reserved.</span>
+      <span>Copyright © 2022-2024 insectmk.cn All Rights Reserved.</span>
     </div>
   </div>
 </template>
