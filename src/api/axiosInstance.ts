@@ -7,14 +7,14 @@ const axiosInstance = axios.create({
   headers: {
     'Content-Type': 'application/json',
   },
-});
+})
 
 // 请求拦截，文档：https://www.axios-http.cn/docs/interceptors
 axiosInstance.interceptors.request.use(config => {
   // 检查登录状态
   const token = localStorage.getItem('token')
   if (token) {
-    config.headers['Authorization'] = 'Bearer ' + token
+    config.headers['Authorization'] = token
   }
   return config
 }, error => {
