@@ -1,5 +1,4 @@
 <template>
-
   <el-menu
     active-text-color="#ffd04b"
     background-color="#545c64"
@@ -8,10 +7,15 @@
     text-color="#fff"
     @open="handleOpen"
     @close="handleClose"
+    :router="true"
     :collapse="isCollapse">
+    <router-link to="/">
+      <h1 style="padding: 10px;background-color: #2c3e50">每日饭菜</h1>
+    </router-link>
     <el-sub-menu v-for="menuLevel1 in menuTree"
                  :key="menuLevel1.id"
-                 :index="menuLevel1.id">
+                 :index="menuLevel1.path"
+                 :unique-opened="true">
       <template #title>
         <el-icon>
           <component :is="menuLevel1.icon"></component>
@@ -20,7 +24,7 @@
       </template>
       <el-menu-item v-for="menuLevel2 in menuLevel1.children"
                     :key="menuLevel2.id"
-                    :index="menuLevel2.id">{{ menuLevel2.name }}</el-menu-item>
+                    :index="menuLevel2.path">{{ menuLevel2.name }}</el-menu-item>
     </el-sub-menu>
   </el-menu>
 </template>

@@ -7,3 +7,14 @@
   display: flex;
   min-height: 100vh; /* 使容器占满整个视口高度 */
 }
+
+// 路由菜单样式
+.router-link-active {
+  text-decoration: none;
+  color: #fff;
+}
+a {
+  text-decoration: none;
+  color: #fff;
+}
+
