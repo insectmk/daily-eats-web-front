@@ -1,11 +1,14 @@
 <template>
   <div>
-    <el-icon :size="20" @click="changeSidebarIsCollapse">
-      <Operation />
+    <el-icon :size="30" @click="changeSidebarIsCollapse" v-if="isCollapse">
+      <Expand />
+    </el-icon>
+    <el-icon :size="30" @click="changeSidebarIsCollapse" v-else>
+      <Fold />
     </el-icon>
     <el-breadcrumb separator="/" style="display: inline-block">
       <el-breadcrumb-item
-        :to="{ path: './page-header.html' }">
+        :to="{ path: '/' }">
         主页
       </el-breadcrumb-item>
       <el-breadcrumb-item>
@@ -19,8 +22,11 @@
 </template>
 
 <script lang="ts" setup>
-import { Operation } from '@element-plus/icons-vue'
 import store from '@/store'
+import { computed } from 'vue'
+import { Expand, Fold } from '@element-plus/icons-vue'
+
+const isCollapse = computed(() => store.state.framework.sidebarIsCollapse) // 展开状态
 
 // 更改侧边栏展开状态
 const changeSidebarIsCollapse = () => {

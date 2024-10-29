@@ -9,9 +9,6 @@
     @close="handleClose"
     :router="true"
     :collapse="isCollapse">
-    <router-link to="/">
-      <h1 style="padding: 10px;background-color: #2c3e50">每日饭菜</h1>
-    </router-link>
     <el-sub-menu v-for="menuLevel1 in menuTree"
                  :key="menuLevel1.id"
                  :index="menuLevel1.path"
