@@ -7,6 +7,7 @@ export const homeSubPages = [
     path: '',
     name: 'home',
     component: () => import('@/views/HomeView.vue'),
+    meta: { title: '欢迎页' },
   },
   ...userPages, // 用户相关页面
   ...systemPages, // 系统相关页面

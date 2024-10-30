@@ -1,21 +1,19 @@
 <template>
   <div>
-    <el-icon :size="30" @click="changeSidebarIsCollapse" v-if="isCollapse">
+    <el-icon class="expand-icon" :size="30" @click="changeSidebarIsCollapse" v-if="isCollapse">
       <Expand />
     </el-icon>
-    <el-icon :size="30" @click="changeSidebarIsCollapse" v-else>
+    <el-icon class="expand-icon" :size="30" @click="changeSidebarIsCollapse" v-else>
       <Fold />
     </el-icon>
-    <el-breadcrumb separator="/" style="display: inline-block">
+    <el-breadcrumb separator="/"
+                   style="display: inline-block; font-size: 16px; margin-left: 20px">
       <el-breadcrumb-item
         :to="{ path: '/' }">
         主页
       </el-breadcrumb-item>
       <el-breadcrumb-item>
-        <a href="./page-header.html">一级菜单</a>
-      </el-breadcrumb-item>
-      <el-breadcrumb-item>
-        二级菜单
+        {{ router.currentRoute.value.meta.title }}
       </el-breadcrumb-item>
     </el-breadcrumb>
   </div>
@@ -25,7 +23,9 @@
 import store from '@/store'
 import { computed } from 'vue'
 import { Expand, Fold } from '@element-plus/icons-vue'
+import router from '@/router'
 
+/*响应式数据*/
 const isCollapse = computed(() => store.state.framework.sidebarIsCollapse) // 展开状态
 
 // 更改侧边栏展开状态
@@ -37,3 +37,14 @@ defineOptions({
   name: 'NavbarComponent'
 })
 </script>
+
+<style lang="scss" scoped>
+/*菜单展开、收缩图标*/
+.expand-icon {
+  cursor: pointer;
+
+  &:hover {
+    background-color: #827f7f; // 焦点时变为红色
+  }
+}
+</style>
