@@ -5,6 +5,8 @@
 
 // 侧边栏
 .de-sidebar {
+  min-height: 100vh;
+  max-height: 100vh;
   color: white; /* 侧边栏文字颜色 */
 }
 // 右侧内容div（包含头部、主要内容、页脚）

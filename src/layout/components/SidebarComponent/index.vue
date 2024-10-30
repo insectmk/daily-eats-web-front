@@ -1,21 +1,25 @@
 <template>
-  <el-menu
-    active-text-color="#ffd04b"
-    background-color="#545c64"
-    class="el-menu-vertical-demo de-sidebar-container"
-    text-color="#fff"
-    @open="handleOpen"
-    @close="handleClose"
-    :router="true"
-    :default-active="router.currentRoute.value.path"
-    :default-openeds="[router.currentRoute.value.path]"
-    :collapse="isCollapse">
-<!-- 循环菜单 -->
-    <sidebar-item
-      v-for="menuLevel1 in menuTree"
-      :key="menuLevel1.id"
-      :item="menuLevel1" />
-  </el-menu>
+  <div style="min-height: 100vh;max-height: 100vh;background-color: #545c64;">
+    <el-scrollbar>
+      <el-menu
+        active-text-color="#ffd04b"
+        background-color="#545c64"
+        class="el-menu-vertical-demo de-sidebar-container"
+        text-color="#fff"
+        @open="handleOpen"
+        @close="handleClose"
+        :router="true"
+        :default-active="router.currentRoute.value.path"
+        :default-openeds="[router.currentRoute.value.path]"
+        :collapse="isCollapse">
+        <!-- 循环菜单 -->
+        <sidebar-item
+          v-for="menuLevel1 in menuTree"
+          :key="menuLevel1.id"
+          :item="menuLevel1" />
+      </el-menu>
+    </el-scrollbar>
+  </div>
 </template>
 
 <script lang="ts" setup>

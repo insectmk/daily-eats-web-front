@@ -1,5 +1,5 @@
 <template>
-  <template v-if="!item.children.length || item.children.length === 0">
+  <template v-if="!item.children || item.children.length === 0">
     <el-menu-item :index="item.path">
       <el-icon>
         <component :is="item.icon"></component>
