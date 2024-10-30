@@ -10,20 +10,11 @@
     :default-active="router.currentRoute.value.path"
     :default-openeds="[router.currentRoute.value.path]"
     :collapse="isCollapse">
-    <el-sub-menu v-for="menuLevel1 in menuTree"
-                 :key="menuLevel1.id"
-                 :index="menuLevel1.id"
-                 :unique-opened="true">
-      <template #title>
-        <el-icon>
-          <component :is="menuLevel1.icon"></component>
-        </el-icon>
-        <span>{{ menuLevel1.name }}</span>
-      </template>
-      <el-menu-item v-for="menuLevel2 in menuLevel1.children"
-                    :key="menuLevel2.id"
-                    :index="menuLevel2.path">{{ menuLevel2.name }}</el-menu-item>
-    </el-sub-menu>
+<!-- 循环菜单 -->
+    <sidebar-item
+      v-for="menuLevel1 in menuTree"
+      :key="menuLevel1.id"
+      :item="menuLevel1" />
   </el-menu>
 </template>
 
@@ -32,6 +23,7 @@ import store from '@/store'
 import { computed, ref } from 'vue'
 import { getUserMenuTree } from '@/api/system/menu'
 import router from '@/router'
+import SidebarItem from '@/layout/components/SidebarComponent/SidebarItem.vue'
 
 /*响应式数据*/
 const isCollapse = computed(() => store.state.framework.sidebarIsCollapse) // 展开状态
