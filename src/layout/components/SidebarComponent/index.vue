@@ -20,17 +20,18 @@
 
 <script lang="ts" setup>
 import store from '@/store'
-import { computed, ref } from 'vue'
+import { computed } from 'vue'
 import { getUserMenuTree } from '@/api/system/menu'
 import router from '@/router'
 import SidebarItem from '@/layout/components/SidebarComponent/SidebarItem.vue'
 
 /*响应式数据*/
 const isCollapse = computed(() => store.state.framework.sidebarIsCollapse) // 展开状态
-const menuTree = ref(null)
+const menuTree = computed(() => store.state.menu.userMenuTree) // 用户树形菜单
 // 获取用户菜单
 getUserMenuTree().then((data) => {
-  menuTree.value = data.data
+  // 更新用户菜单
+  store.commit('menu/userMenuTree', data.data)
 })
 /*函数*/
 const handleOpen = (key: string, keyPath: string[]) => {
